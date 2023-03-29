@@ -1,0 +1,52 @@
+{
+    "productos": [
+        {
+            "id": "M01",
+            "nombre": "Sunglasses",
+            "descripcion": "Lentes de sol proteccion UVA/UV",
+            "precio": "150000",
+            "stock": 10,
+            "image": "img_glass.jpg"
+        },
+        {
+            "id": "M02",
+            "nombre": "Sun_glass",
+            "descripcion": "Lentes de sol protección UVA/UV",
+            "precio": "78000",
+            "stock": "10",
+            "image": "fast_glass2.jpg"
+        },
+        {
+            "nombre": "Charlotte_glass",
+            "descripcion": "Lentes de sol protección UVA/UV",
+            "precio": "108000",
+            "stock": "10",
+            "image": "gold_3.jpg",
+            "id": "M03"
+        },
+        {
+            "nombre": "Rock_glass",
+            "descripcion": "Lentes de sol protección UVA/UV",
+            "precio": "150000",
+            "stock": "7",
+            "image": "iblack_4.jpg",
+            "id": "M04"
+        },
+        {
+            "nombre": "Julius_glass",
+            "descripcion": "Lentes de sol protección UVA/UV",
+            "precio": "82000",
+            "stock": "5",
+            "image": "square_5.jpg",
+            "id": "M05"
+        },
+        {
+            "nombre": "Ness_glass",
+            "descripcion": "Lentes de sol protección UVA/UV",
+            "precio": "110000",
+            "stock": "10",
+            "image": "round_6.jpg",
+            "id": "M06"
+        }
+    ]
+}

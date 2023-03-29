@@ -1,15 +1,15 @@
 <div class="card mb-3 mx-auto mt-5" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="{{img}}" class="img-fluid rounded-start" alt="{{nombre}}">
+      <img src="/imagenes/{{this.image}}" class="img-fluid rounded-start" alt="{{this.nombre}}">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{nombre}}</h5>
-        <p class="card-text">{{descripcion}}</p>
-        <p class="card-text">Stock: {{stock}}</p>
-        <p class="card-text">Precio: {{precio}}</p>
-        <button class="btn btn-primary" onclick="agregarCarro('{{id}}', {{stock}})">Agregar al carro</button>
+        <h5 class="card-title">{{this.nombre}}</h5>
+        <p class="card-text">{{this.descripcion}}</p>
+        <p class="card-text">Stock: {{this.stock}}</p>
+        <p class="card-text">Precio: {{this.precio}}</p>
+        <button class="btn btn-primary" onclick="agregarCarro('{{this.id}}', {{this.stock}})">Agregar al carro</button>
       </div>
     </div>
   </div>
@@ -17,31 +17,26 @@
 
 
 <script>
-    //FUNCIÓN QUE PERMITE AGREGAR PRODUCTOS AL CARRO
-        const agregarCarro = (id, stock) => {
-            try{
+var agregarCarro = (id) => {
+  const myHeaders = new Headers()
+  myHeaders.append('Content-Type', 'application/json')
 
-                let storageCarro = JSON.parse(localStorage.getItem("productos")) || []
+  const raw = JSON.stringify({
+    idUsuario: '1',
+    id_producto: id
+  })
 
-                let buscarProducto = storageCarro.find(producto => producto.id == id)
-                if(buscarProducto){
-                    if(buscarProducto.cantidad >= stock){
-                        buscarProducto.cantidad = stock
-                        alert("Usted alcanzó el stock máximo de productos: " + stock);
-                    }else {
-                        buscarProducto.cantidad = buscarProducto.cantidad +1
-                    }
-                    
-                }else {
-                    storageCarro.push({id, cantidad: 1})
-                }
-                alert("Producto agregado correctamente.")
-                localStorage.setItem("productos", JSON.stringify(storageCarro))
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw
+  }
 
-            }catch(error){
-                alert("Ha ocurrido un error al cargar el producto, intente nuevamente.")
-                localStorage.setItem("productos", "[]")
-                location.reload();
-            }
-        }
+  fetch('/api/v1/carro', requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      alert(result.message)
+    })
+    .catch(error => console.log('error', error))
+}
 </script>

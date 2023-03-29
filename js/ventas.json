@@ -1,0 +1,102 @@
+{
+    "ventas": [
+      {
+        "id": "873048",
+        "fecha": "11-03-2023",
+        "productos": [
+          {
+            "sku": "M02",
+            "amount": 1,
+            "value": 78000,
+            "discount": 1000,
+            "total": 77000
+          },
+          {
+            "sku": "M01",
+            "amount": 1,
+            "value": 150000,
+            "discount": 3000,
+            "total": 147000
+          },
+          {
+            "sku": "M05",
+            "amount": 1,
+            "value": 82000,
+            "discount": 2000,
+            "total": 80000
+          },
+          {
+            "sku": "M06",
+            "amount": 1,
+            "value": 110000,
+            "discount": 5000,
+            "total": 105000
+          }
+        ],
+        "total": 409000
+      },
+      {
+        "id": "577ac8",
+        "fecha": "15-03-2023",
+        "productos": [
+          {
+            "sku": "M03",
+            "amount": 3,
+            "value": 108000,
+            "discount": 8000,
+            "total": 300000
+          },
+          {
+            "sku": "M04",
+            "amount": 2,
+            "value": 150000,
+            "discount": 5000,
+            "total": 290000
+          },
+          {
+            "sku": "M02",
+            "amount": 1,
+            "value": 122500,
+            "discount": 3000,
+            "total": 119500
+          }
+        ],
+        "total": 709500
+      },
+      {
+        "id": "3476c8",
+        "fecha": "20-03-2023",
+        "productos": [
+          {
+            "sku": "M05",
+            "amount": 3,
+            "value": 190000,
+            "discount": 20000,
+            "total": 570000
+          }
+        ],
+        "total": 570000
+      },
+      {
+        "id": "cf5a92",
+        "fecha": "26-03-2023",
+        "productos": [
+          {
+            "sku": "M06",
+            "amount": 2,
+            "value": 110000,
+            "discount": 10000,
+            "total": 200000
+          },
+          {
+            "sku": "M04",
+            "amount": 1,
+            "value": 190000,
+            "discount": 20000,
+            "total": 170000
+          }
+        ],
+        "total": 370000
+      }
+    ]
+  }
