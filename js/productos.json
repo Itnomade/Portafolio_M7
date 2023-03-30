@@ -2,7 +2,7 @@
     "productos": [
         {
             "id": "M01",
-            "nombre": "Sunglasses",
+            "nombre": "Sunrise.exe",
             "descripcion": "Lentes de sol proteccion UVA/UV",
             "precio": "150000",
             "stock": 10,
@@ -10,7 +10,7 @@
         },
         {
             "id": "M02",
-            "nombre": "Sun_glass",
+            "nombre": "Mimal_sun",
             "descripcion": "Lentes de sol protección UVA/UV",
             "precio": "78000",
             "stock": "10",
@@ -25,7 +25,7 @@
             "id": "M03"
         },
         {
-            "nombre": "Rock_glass",
+            "nombre": "Rock-concert",
             "descripcion": "Lentes de sol protección UVA/UV",
             "precio": "150000",
             "stock": "7",
@@ -33,7 +33,7 @@
             "id": "M04"
         },
         {
-            "nombre": "Julius_glass",
+            "nombre": "Dearone",
             "descripcion": "Lentes de sol protección UVA/UV",
             "precio": "82000",
             "stock": "5",

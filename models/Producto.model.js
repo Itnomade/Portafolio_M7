@@ -23,6 +23,13 @@ export const Producto = sequelize.define('productos', {
             min:0
         }
     },
+    discount: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+      validate: {
+        min: 0
+      }
+    },
     stock: {
         type: DataTypes.INTEGER,
         allowNull: false,

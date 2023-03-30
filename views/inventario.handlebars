@@ -99,7 +99,7 @@
 
 //PETICIÓN AL SERVIDOR PARA ELIMINAR UN PRODUCTO.
     const eliminarProducto = (id) => {
-        fetch("http://localhost:3000/api/productos?id="+id, {method:"DELETE"})
+        fetch("http://localhost:3001/api/productos?id="+id, {method:"DELETE"})
         .then(response => response.json())
         .then(data => {
             if(data.code == 400 || data.code == 500 ){
@@ -118,7 +118,7 @@
 //FUNCIÓN PARA CARGAR AL FORMULARIO DEL MODAL LOS DATOS DEL PRODUCTO QUE SE QUIERE ACTUALIZAR
     const preparaUpdate = (id) => {
 
-        fetch("http://localhost:3000/api/productos/"+id)
+        fetch("http://localhost:3001/api/productos/"+id)
             .then(response => response.json())
             .then(data => {
                 if(data.code == 400 || data.code == 500 ){
@@ -158,7 +158,7 @@
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        fetch("http://localhost:3000/api/productos", {
+        fetch("http://localhost:3001/api/productos", {
             method: "POST",
             headers: myHeaders,
             body: JSON.stringify(nuevoProducto)
@@ -192,7 +192,7 @@
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        fetch("http://localhost:3000/api/productos", {
+        fetch("http://localhost:3001/api/productos", {
             method: "PUT",
             headers: myHeaders,
             body: JSON.stringify(nuevoProducto)
@@ -214,7 +214,7 @@
 
 
 //PETICIÓN INICIAL AL SERVIDOR PARA TRAER LOS PRODUCTOS EXISTENTES
-  fetch("http://localhost:3000/api/productos")
+  fetch("http://localhost:3001/api/productos")
         .then(response => response.json())
         .then(data => {
             if(data.code == 500){

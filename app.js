@@ -4,13 +4,16 @@ import { create } from 'express-handlebars';
 
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 
 //RUTAS//
 import viewsRoutes from './routes/views.routes.js';
 
 import productsRoutes from './routes/productos.routes.js';
-import carroRoutes from './routes/carro.routes.js'
+import carroRoutes from './routes/carro.routes.js';
+import ventasRoutes from './routes/ventas.routes.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express(); 
 
@@ -23,6 +26,7 @@ app.use(cors());
 app.use(viewsRoutes);
 app.use('/api/v1', productsRoutes); 
 app.use('/api/v1', carroRoutes); 
+app.use('/api/v1', ventasRoutes);
 
 app.listen(3001, () => { console.log('Servidor en http://localhost:3001'); });
 
